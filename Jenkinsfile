@@ -18,7 +18,7 @@ pipeline {
          stage('Run Tests') {
              steps {
                  script {
-                     env.DOCKER BUILDKIT = 1
+                     env.DOCKER_BUILDKIT = 1
                      sh 'docker run -e CI=true shahd/docker-react npm run test'
                  }
              }
